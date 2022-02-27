@@ -1,47 +1,50 @@
 import os
 import string
 
+from pyparsing import Char
+
 def dividi(parola):
     return [char for char in parola]
 
 
-alfabeto = list(string.ascii_uppercase)
+alfabeto: str = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'Z']
 alfabeto.append(' ')
-lunghezza_alfabeto: int = len(alfabeto)
-parola_codificata_num = []
-parola_decodificata = []
-
-print(alfabeto)
-print(lunghezza_alfabeto)
 
 
-def codifica():
+def decodifica():
     chiave = int(input('Inserire la tua chiave: ')) # python returns str on input so int()
-    parola_decodificata: str = input('Inserire la parola da codificare: ')
-    parola_decodificata = parola_codificata.upper()
-    string_lenght: int = len(parola_decodificata)
-    parola_decodificata = list(dividi(parola_decodificata))
-    parola_decodificata_num = []
+    parola_codificata: str = input('Inserire la parola da decodificare: ')
+    parola_codificata = parola_codificata.upper()
+    string_lenght: int = len(parola_codificata)
+    parola_codificata = list(dividi(parola_codificata))
+    parola_codificata_num = []
 
+    # trova le posizioni reali della parola nell'alfabeto
     x: int = 0
     for x in range(string_lenght):
         i: int = 0
-        for i in range(lunghezza_alfabeto):
-            if parola_decodificata[x] == alfabeto[i]:
-                if (i + 4) > 27:
-                    parola_decodificata_num.append((i + chiave) - 27)
+        for i in range(len(alfabeto)):
+            if parola_codificata[x] == alfabeto[i]:
+                if (i + chiave) >= len(alfabeto):
+                    parola_codificata_num.append((i + chiave) - 22)
                 else:
-                    parola_decodificata_num.append(i + chiave)
+                    parola_codificata_num.append(i + chiave)
             i+=1
         x+=1
     
+    # assegna le lettere ad ogni numero la lettera corrispondente
     j: int = 0
-    parola_codificata = []
+    parola_decodificata: str = []
     for j in range(string_lenght):
-        if parola_decodificata_num == j:
-            parola_codificata
-        
+        i: int = 0
+        for i in range(len(alfabeto)):
+            if parola_codificata_num[j] == i:     
+                parola_decodificata.append(alfabeto[i])
+                i+=1
+        j+=1
+            
 
+    print(f"i numeri decodificati sono: {parola_codificata_num}")
+    print(f"La parola decodificata e': {parola_decodificata}")
 
-    print(parola_decodificata_num)
-    print(parola_codificata)
+decodifica()
