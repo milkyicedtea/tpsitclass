@@ -1,0 +1,152 @@
+<HTML>
+  <HEAD>
+    <TITLE>form o moduli Corso Web Master - di Claudio Gagliardi</TITLE>
+    </HEAD>
+  <body bgcolor="#E0E4E3" font size=3 vLink=#ff6633>
+    <p align=center>
+
+    Cominciamo ad usare uno degli strumenti piu' potenti di Internet, che rende un sito veramente interattivo. Attraverso i moduli � possibile ottenere informazioni dall'utente. L'utente deve riempire i cosidetti campi di <b><i>input</i></b>, che sono di vario tipo.<br>
+    </p>
+    <p><center><table  cellspacing=2 cellpadding=2>
+    <tr>
+      <td> L'utente puo' inserire dei dati in caselle di testo...
+      </td>
+      <td bgcolor=darkorange><center><b><pre>Inserisci i seguenti dati:</b></pre>
+
+     <form>
+          <b> <pre> &nbsp; &nbsp; &nbsp; Nome &nbsp;
+         <input type="text" name="nome" maxlength=15 size=20> 
+        <br>   Cognome &nbsp;
+       <input type="text" name="cognome" maxlength=15 size=20>
+       <br>  &nbsp;&nbsp;&nbsp;&nbsp;Eta'&nbsp;
+       <input type="text" name="eta" maxlenght=5 size=2><br>      Password&nbsp;
+       <input type="password" name="parola d'ordine"
+              size=6></pre></b>
+   </form></center></td>
+     </tr>
+
+     <tr>
+        <td>operare delle scelte che si escludono a vicenda...
+       </td>
+       <td bgcolor=yellow><br><form><b><center><pre>Sesso:&nbsp;
+         <input type="radio" name="sesso" value="m"> &nbsp; Maschio 
+         <input type="radio" name="sesso"  value="f"> &nbsp;  Femmina</pre></b></center>
+
+
+<b><center><pre>Maggiorenne:&nbsp;
+         <input type="radio" name="Maggiorenne" value="s">&nbsp;Maggiorenne 
+         <input type="radio" name="Maggiorenne"                           value="n">&nbsp;Minorenne</pre></b></center>
+
+
+
+</form></td>
+     </tr>
+     <tr>
+        <td>oppure operare scelte multiple... 
+     </td>
+     <td bgcolor=red><form><b><center><pre>Quali letture ti piacciono?<br>&nbsp;
+        <input type="checkbox" name="leggi" value="narra">&nbsp;Narrativa 
+        <input type="checkbox" name="leggi" value="s">&nbsp;Saggi
+        <input type="checkbox" name="leggi"  value="g">    &nbsp;Gialli</pre></b></center></form>
+     </td>
+    </tr>
+    <tr>
+      <td>scegliere una tra pi� opzioni in un elenco a discesa... 
+      <td bgcolor=lime><center><b><pre>
+
+  <form> Dove compri di solito i libri?
+       <br>          
+       <select  name="scelta">
+                <option>Libreria
+                <option>Edicola
+                <option>Supermercato
+                <option>Via Internet
+      </select>
+  </form> 
+  
+</pre></center>
+      </td>
+    </tr>
+    <tr>
+      <td>avere uno spazio predefinito dove inserire delle righe di testo oppure copiare qualcosa... 
+    </td>
+    <td bgcolor=maroon><br><center>
+    <form method="get">
+      <textarea name="testo" rows="6" cols="30">
+        Copia questo codice per ottenere un'area di testo:
+    <form method="get">
+       <textarea name="testo" rows="6" cols="30"> 
+         &lt;/textarea&gt;
+         &lt;/form&gt;
+
+
+          Prova a scrivere qui dentro qualcosa....
+
+       </textarea>
+    </form></center>
+    </td>
+    </tr>
+    <tr>
+      <td>inviare i dati oppure cancellare quanto � stato scritto.
+    </td>
+    <td bgcolor=red><br><center><form>
+    <input type="button" name="Invia" value="INVIA">&nbsp;&nbsp;&nbsp;
+    <input type="button" name="Cancella" value="CANCELLA">
+
+  </form>
+  <center><br>
+  <center><b><pre>ATTENZIONE! QUESTI TASTI NON    FUNZIONANO!</pre></center></b></td></tr>
+  </table></center></p>
+<hr size="3" width="80%" align="center" color="navy">
+<p ALIGN="CENTER"><a name=impara>ISTRUZIONI</a> PER INSERIRE I VARI ELEMENTI</p>
+<p>
+Per preparare un form basta seguire poche e semplici regole. Supponiamo di voler preparare un form come quello dell'esempio. I dati che l'utente immetter� nei vari campi saranno spediti all'indirizzo e-mail specificato, che di solito � quello dell'autore del sito. Questo � il metodo pi� semplice per ottenere informazioni, ed � valido se non si ha un grande traffico oppure se vogliamo solo pochi dati: dato che siamo principianti, per ora possiamo contentarci. Seguiremo i seguenti passi:</p>
+<OL>
+<LI>Dichiarare il form attraverso il tag<br>
+<b><font color=maroon size=1 face=verdana>&lt;form name=&quot;NomeForm&quot;  method="post" action="mailto:indirizzo e-mail" ENCTYPE="text/plain" &gt;</b><br>
+Intendiamo cos� dichiarare che tutti i dati immessi, una volta premuto il pulsante <i><b>Invia</b></i>, devono essere inviati al nostro indirizzo di posta elettronica.
+
+<LI>Inserire gli elementi che ci occorrono all'interno dei tag<br>&lt;form&gt; &lt;/form&gt;.<br>
+Gli elementi che ora presentiamo servono tutti allo scopo di darci delle informazioni: perci� sono detti di <font color=maroon><b>input</font>.<br>
+</ol>
+<p><table border=1 cellpadding=2><caption>Abbiamo a disposizione i seguenti tipi di input:</caption>
+<tr><td><center><input type="text" name="nome" maxlenght=50 size=4></td>
+<td><center><input type="password" name="parola d'ordine" size=4></td>
+<td><center><input type="checkbox" name="leggi" value="uno"><input type="checkbox" name="leggi" value="due"></td>
+<td><center><input type="radio" name="sesso" value="m"><input type="radio" name="sesso" value="f"></td>
+<td><center><select name="scelta"><option>Libreria<option>Edicola<option>Supermercato<option>Via Internet</select></td>
+<td><center><textarea name="t1" rows="2" cols="10"></textarea></td>
+</tr>
+<tr><td><font color=maroon size=1 face=verdana><a href="Elementi dei form.htm#caselle" target="_self">Caselle</a> di testo</td>
+<td><font color=maroon size=1 face=verdana><a href="Elementi dei form.htm#password" target="_self">Campi password</td>
+<td><font color=maroon size=1 face=verdana><a href="Elementi dei form.htm#controllo">Pulsanti</a> di controllo: se ne pu� selezionare pi� di uno.</td>
+<td><font color=maroon size=1 face=verdana><a href="Elementi dei form.htm#radio">Pulsanti</a> di opzione: se ne pu� selezionare solo uno.</td>
+<td><font color=maroon size=1 face=verdana><a href="Elementi dei form.htm#Elenchi">Elenchi</a> a discesa.</td>
+<td><font color=maroon size=1 face=verdana><a href="Elementi dei form.htm#aree">Aree</a> di testo.</td>
+</tr>
+<tr><td colspan=6><b><font size=1 face=verdana>Prova ad usare i vari elementi di input per vedere il loro funzionamento!<br>
+Clicca sulle parole calde per conoscere il codice necessario ad inserire gli elementi che ti interessano!</b></td></tr> 
+</table>
+<p>
+<center><table width=80% border=1><caption>Abbiamo inoltre a disposizione due pulsanti predefiniti:</caption>
+<tr><td><center><input type="button" name="Invia" value="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INVIA&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"></td>
+<td><font color=maroon size=1 face=verdana>Determina l'<a href="Elementi dei form.htm#invia">azione</a> specificata da "action" nel form</td></tr>
+<tr><td><center><input type="button" name="Cancella" value="CANCELLA"></td>
+<td><font color=maroon size=1 face=verdana><a href="Elementi dei form.htm#cancella">Reimposta</a> il form: cancella tutti i dati immessi dall'utente.</td>
+</tr>
+</table></p></b></center>
+Se clicchi <a href="Listato.htm" target="_self">qui</a> ottieni un listato completo che puoi copiare per preparare il tuo primo form. Devi solo inserire, al posto dei puntini, il tuo indirizzo di posta elettronica. Potrai cos� riempire il form e spedirlo a te stesso.<br>
+Se per caso la spedizione non va a buon fine, prova a sostituire <b><font color=maroon>ENCTYPE="text/plain"</b></font> con <font color=maroon><b>ENCTYPE="application/x-www-form-urlencoded"</b></font>.<br>
+Con questo secondo codice il risultato non sar�, per�, molto elegante:
+<ul>
+<li>il form arriver� sotto forma di allegato, in formato <b>ATT</b>;
+<li> per leggerlo si dovr� scegliere wordpad o simili;
+<li>i campi verranno visualizzati uno dopo l'altro, separati dalla &amp;.
+</ul>
+Resta comunque il fatto che intanto puoi ottenere delle informazioni.
+
+</center></p>
+
+
+</BODY>
+</HTML>
