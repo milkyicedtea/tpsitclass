@@ -1,15 +1,11 @@
 import os
 import string
 
-from pyparsing import Char
-
 def dividi(parola):
     return [char for char in parola]
 
-
 alfabeto: str = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'Z']
 alfabeto.append(' ')
-
 
 def decodifica():
     chiave = int(input('Inserire la tua chiave: ')) # python returns str on input so int()
@@ -43,7 +39,6 @@ def decodifica():
                 i+=1
         j+=1
             
-
     print(f"i numeri decodificati sono: {parola_codificata_num}")
     print(f"La parola decodificata e': {parola_decodificata}")
 
