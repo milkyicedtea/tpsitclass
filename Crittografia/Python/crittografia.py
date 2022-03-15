@@ -1,5 +1,4 @@
 import os
-import string
 
 def dividi(parola):
     return [char for char in parola]
@@ -8,7 +7,7 @@ alfabeto: str = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'L', 'M', 'N', 'O'
 alfabeto.append(' ')
 
 def decodifica():
-    chiave = int(input('Inserire la tua chiave: ')) # python returns str on input so int()
+    chiave = int(input('Inserire la tua chiave: ')) # python returns str on input() so int(input())
     parola_codificata: str = input('Inserire la parola da decodificare: ')
     parola_codificata = parola_codificata.upper()
     string_lenght: int = len(parola_codificata)
@@ -38,7 +37,7 @@ def decodifica():
                 parola_decodificata.append(alfabeto[i])
                 i+=1
         j+=1
-            
+
     print(f"i numeri decodificati sono: {parola_codificata_num}")
     print(f"La parola decodificata e': {parola_decodificata}")
 
