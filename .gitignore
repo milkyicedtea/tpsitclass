@@ -1,4 +1,17 @@
+#VS / VSC files
+.vs
+.vscode
+*.vcxproj
+*.vcxproj.user
+*.vcxproj.filters
+x64
+
+#Archive files
 *.rar
+*.zip
+*.7z
+
+#Ignoring for privacy
 Regolamento scolastico
 pp
 sito

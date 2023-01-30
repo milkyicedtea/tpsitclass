@@ -12,7 +12,7 @@ int main()
     pid2 = fork();
     pid3 = fork();
 
-    if ((pid1 == 0) || (pid2 == 0) (pid3 == 0))
+    if ((pid1 == 0) || (pid2 == 0) || (pid3 == 0))
     {
         printf("Sono il processo figlio con pid:%d. ", getpid());
         printf("Il mio papi ha il pid: %d\n.", getppid());
@@ -22,7 +22,7 @@ int main()
     else
     {
         sleep(2);
-        printf("Sono il processo padre con ppid:%d\n.", getppid()),
+        printf("Sono il processo padre con ppid:%d\n.", getppid());
 
     }
     return 0;
