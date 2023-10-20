@@ -9,7 +9,8 @@
 <div id=divbox>
     <form method = "POST" action="Lancio_dado.php">
 
-    <?php 
+    <?php
+    // comment debug info
         // $ip=$_SERVER['REMOTE_ADDR'];  /* Indirizzo ip del'host */
         // echo $ip.'<br>';
 
