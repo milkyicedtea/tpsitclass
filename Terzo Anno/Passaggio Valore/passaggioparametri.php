@@ -1,4 +1,7 @@
-<body bgcolor="#4e64fa">
+<!DOCTYPE HTML>
+<html lang="it">
+<link href="./passaggio.css" rel="stylesheet" type="text/css"/>
+<body>
 <?php
     if (isset($_POST['valore']))
     {
@@ -16,11 +19,8 @@
         echo '<br>';
         echo '<input type = "submit" id = "submit" value = "passo parametri">';
 
-        echo '</form>';
+        //echo '</form>';
     }
 ?>
 </body>
-
-
-
-
+</html>
